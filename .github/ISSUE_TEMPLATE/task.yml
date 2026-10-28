@@ -1,0 +1,55 @@
+name: Task
+description: A specific piece of work someone can pick up (mostly used by officers and project leads).
+title: "Task: "
+labels: ["task"]
+body:
+  - type: textarea
+    id: what
+    attributes:
+      label: What needs doing?
+    validations:
+      required: true
+  - type: textarea
+    id: done-when
+    attributes:
+      label: It's done when...
+      description: How will we know it's finished? A checklist works well.
+      placeholder: |
+        - [ ] The command replies in chat
+        - [ ] The README explains how to use it
+    validations:
+      required: true
+  - type: dropdown
+    id: difficulty
+    attributes:
+      label: Difficulty
+      description: If this is a good first issue, an officer will add that label too.
+      options:
+        - Beginner (good first issue)
+        - Some experience
+        - Challenging
+    validations:
+      required: true
+  - type: dropdown
+    id: skills
+    attributes:
+      label: Skills involved
+      multiple: true
+      options:
+        - Python
+        - JavaScript
+        - Java
+        - Prompting / AI models
+        - Art or sound
+        - Writing
+        - Testing
+        - Other
+    validations:
+      required: false
+  - type: textarea
+    id: pointers
+    attributes:
+      label: Hints for whoever picks this up
+      description: Optional. Files to look at, links, or who to ask.
+    validations:
+      required: false

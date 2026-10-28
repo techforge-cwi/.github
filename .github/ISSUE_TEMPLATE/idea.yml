@@ -1,0 +1,34 @@
+name: Idea
+description: Suggest a feature, a project, or something fun to build.
+title: "Idea: "
+labels: ["idea"]
+body:
+  - type: textarea
+    id: idea
+    attributes:
+      label: What's the idea?
+    validations:
+      required: true
+  - type: textarea
+    id: why
+    attributes:
+      label: Why would it be fun or useful?
+    validations:
+      required: false
+  - type: textarea
+    id: first-step
+    attributes:
+      label: What would a small first step look like?
+      description: Optional. Big ideas are easier to start when someone can pick off a small piece.
+    validations:
+      required: false
+  - type: dropdown
+    id: work-on-it
+    attributes:
+      label: Do you want to work on it?
+      options:
+        - "Yes"
+        - Yes, with some help
+        - No, just sharing
+    validations:
+      required: true

@@ -1,0 +1,32 @@
+name: Bug report
+description: Something is broken or doesn't work the way it should.
+title: "Bug: "
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: Thanks for reporting! The more detail you give, the faster someone can fix it.
+  - type: textarea
+    id: what-happened
+    attributes:
+      label: What happened?
+      description: What did you expect to happen, and what happened instead?
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: How can someone make it happen again?
+      placeholder: |
+        1. Start the server
+        2. Type "!follow" in chat
+        3. The bot walks into lava
+    validations:
+      required: false
+  - type: textarea
+    id: details
+    attributes:
+      label: Screenshots, error messages, or anything else
+      description: Paste error text as text, not as a picture, if you can.
+    validations:
+      required: false
